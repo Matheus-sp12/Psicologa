@@ -1,12 +1,33 @@
-# React + Vite
+# Psicoterapia - Página de Agendamento e Consultas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Link para o site**: [https://psicologa-puce.vercel.app/](https://psicologa-puce.vercel.app/)
 
-Currently, two official plugins are available:
+### Print da Página:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Imagem da pagina](./src/assets/print.png)  <!-- Substitua com o caminho correto da imagem -->
 
-## Expanding the ESLint configuration
+Este é um site criado para uma **psicóloga** fornecer informações sobre seus serviços, incluindo agendamento de sessões, FAQ, depoimentos, e mais. O projeto foi desenvolvido utilizando **React** e **Sass**, com várias bibliotecas para funcionalidade adicional.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+- **Agendamento de Sessões**: Permite que os usuários agendem uma consulta.
+- **Carrossel de Depoimentos**: Exibe feedback de pacientes sobre o serviço oferecido.
+- **FAQ**: Respostas para perguntas frequentes sobre psicoterapia e os serviços oferecidos.
+- **Envio de E-mail**: O usuário pode enviar um e-mail diretamente da página de contato.
+- **Navbar Responsiva**: Menu de navegação com um menu hambúrguer para dispositivos móveis.
+
+## Tecnologias e Bibliotecas Utilizadas
+
+- **React**: Framework JavaScript para construir interfaces de usuário.
+- **Sass**: Pré-processador CSS para escrever estilos de forma modular e reutilizável.
+- **React Router**: Biblioteca para navegação entre páginas (caso o projeto tenha mais de uma página).
+- **React Carousel**: Biblioteca para implementar o carrossel de depoimentos.
+- **EmailJS**: Serviço para enviar e-mails diretamente do cliente sem necessidade de backend.
+- **React Icons**: Para adicionar ícones em várias partes do site (ex: ícones de redes sociais).
+- **React Hooks**: Para gerenciar o estado e os efeitos no React, como o estado do menu hambúrguer.
+
+## Como Rodar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/psicoterapia-puce.git

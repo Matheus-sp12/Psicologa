@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./styles.scss";
-import img1 from "../../assets/logo.svg"; // Ajuste conforme necessário
+import img1 from "../../assets/logo2.svg"; // Ajuste conforme necessário
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

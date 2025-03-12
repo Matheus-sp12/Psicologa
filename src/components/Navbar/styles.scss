@@ -30,7 +30,7 @@
   }
   
   .navbar .logo img {
-    width: 150px;
+    width: 100px;
   }
   
   .navbar .close-btn {
@@ -63,6 +63,8 @@
     display: block;
     transition: background 0.3s;
     padding: 10px;
+    font-family: config.$fontTitle;
+    font-weight: bold;
   }
   
   .navbar .navbar-list li a:hover {
@@ -82,10 +84,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: config.$fontTitle;
+    font-weight: bold;
   }
   
   .top-navbar .logo {
-    width: 150px;
+    width: 80px;
   }
   
   .top-navbar .logo img {
@@ -177,5 +181,5 @@
   }
   
   .logo img {
-    width: 250px;
+    width: 50px;
   }
