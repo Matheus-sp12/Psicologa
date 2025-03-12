@@ -1,0 +1,166 @@
+@use '../config.scss';
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Garante espaçamento entre os elementos
+    align-items: center;
+    background-image: url('../../assets/banner/img1.svg'); // Background padrão (desktop)
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    height: 85vh;
+
+    .mobile-img {
+        display: none;
+
+    }
+    .banner-content {
+        max-width: 1000px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        }
+
+    h3 {
+        font-size: 2.5rem;
+        width: 50%;
+        color: config.$colorSecundary;
+        font-family: config.$fontBanner;
+        margin-bottom: 15px;
+        margin-top: 0; // Garante que o texto comece do topo
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        width: 50%;
+    }
+
+    /* 📌 Botão posicionado no final da seção */
+    .agendar-sessao {
+        background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+        color: #fff;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        font-size: 1.2rem;
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        bottom: 15px; // Fixa o botão na parte de baixo da seção
+
+        &:hover {
+            background: linear-gradient(135deg, #EC7FA9, #FFB8E0);
+        }
+
+        .whatsapp-icon {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            background-color: config.$colorTertiary;
+        }
+    }
+}
+
+/* 📌 Ajuste para Mobile */
+@media (max-width: 768px) {
+    .banner {
+        padding: 15px;
+        background-image: url('../../assets/banner/img1.svg'); // Background padrão (desktop)
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .agendar-sessao {
+        width: 80%;
+        max-width: 250px;
+        font-size: 1rem;
+        bottom: 15px; // Mantém o botão fixo no final
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        background-image: none; // Garante a troca da imagem no mobile
+        padding: 10px;  // Ajustado para reduzir o espaçamento
+        position: relative;
+        height: auto;
+
+        .mobile-img {
+            display: block;
+            width: 650px;
+            height: auto
+    
+        }
+
+        .banner-content {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; // Centraliza os conteúdos
+            justify-content: flex-start; // Garante que o conteúdo fique no topo
+            height: 100%; // Ajusta para ocupar toda a altura disponível
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            width: 80%;
+            color: config.$colorSecundary;
+            font-family: config.$fontBanner;
+            margin-top: 0;  // Removido o espaço superior
+            margin-bottom: 10px;  // Pequeno espaço abaixo do título
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            width: 80%; // Ajustado para maior largura
+            text-align: left; // Centraliza o texto no mobile
+        }
+
+        /* 📌 Botão posicionado no final da seção */
+        .agendar-sessao {
+            background-color: config.$colorTertiary;
+            color: #fff;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            font-size: 1.2rem;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            bottom: 0;
+
+            .whatsapp-icon {
+                margin-left: 10px;
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                background-color: config.$colorTertiary;
+            }
+        }
+    }
+}
+
+

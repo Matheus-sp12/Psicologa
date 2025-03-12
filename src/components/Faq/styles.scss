@@ -1,0 +1,91 @@
+@use '../config.scss';
+
+.faq-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #2d4d46;
+  
+    h2 {
+      font-size: 30px;
+      font-family: config.$fontBanner;
+      color: rgb(255, 255, 255);
+      padding-top: 5px;
+      width: 100%;
+      font-size: 2.5rem;
+      color: config.$colorTertiary;
+      font-family: config.$fontBanner;
+    }
+  
+    .faq-list {
+      .faq-item {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+  
+        .faq-question {
+          width: 100%;
+          background: none;
+          border: none;
+          text-align: left;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: config.$colorTertiary;
+          transition: color 0.3s ease-in-out;
+  
+          .icon {
+            transition: transform 0.3s ease;
+          }
+  
+          .open {
+            transform: rotate(180deg);
+          }
+  
+          &:hover {
+            color: config.$colorSecundary;
+          }
+        }
+  
+        .faq-answer {
+          overflow: hidden;
+          p {
+            padding: 10px;
+            font-size: 16px;
+            color: #555;
+            text-align: left;
+          }
+        }
+      }
+    }
+  
+    .schedule-btn {
+      background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto;
+  
+      &:hover {
+        background: linear-gradient(135deg, #EC7FA9, #FFB8E0);
+      }
+    }
+  }
+  
+  .whatsapp-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}

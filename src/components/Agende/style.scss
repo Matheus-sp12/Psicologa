@@ -1,0 +1,237 @@
+@use '../config.scss';
+
+.agendamento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background: white;
+    border-radius: 10px;
+    max-width: 60%;
+    width: 100%;
+    margin: 50px auto;
+    text-align: left;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 10px rgba(208, 30, 231, 0.562);
+
+    .content {
+        flex: 1;
+        padding: 40px 20px;
+        position: relative;
+
+        h2 {
+            font-size: 30px;
+            font-family: config.$fontBanner;
+            color: rgb(255, 255, 255);
+            padding-top: 5px;
+            width: 100%;
+            font-size: 2.5rem;
+            color: config.$colorQuaternary;
+            font-family: config.$fontBanner;
+        }
+
+        .steps {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-left: 30px;
+
+            // Linha conectando os números
+            &::before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(180deg, #FFB8E0, #EC7FA9);
+                transform: translateX(-50%);
+            }
+
+            .step {
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                gap: 15px;
+
+                .number {
+                    width: 40px;
+                    height: 40px;
+                    background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateX(-50%);
+                    z-index: 2;
+                }
+
+                .text {
+                    margin-left: 50px;
+                    width: 80%;
+
+                    h3 {
+                        color: #BE5985;
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        color: #555;
+                        font-size: 14px;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+            width: 250px;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: linear-gradient(135deg, #EC7FA9, #FFB8E0);
+            }
+
+            .whatsapp-icon {
+                margin-left: 10px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    // Imagem ao lado
+    .image {
+        max-width: 45%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* 📌 Responsividade */
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+    .agendamento {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        max-width: 80%;
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .steps {
+        padding-left: 0;
+
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .step {
+            flex-direction: column;
+            align-items: center;
+
+            .number {
+                position: relative;
+                left: auto;
+                top: auto;
+                transform: none;
+                margin-bottom: 10px;
+            }
+
+            .text {
+                width: 100%;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin: 20px auto;
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .image {
+        display: none; // Remove a imagem em telas menores
+    }
+}
+
+/* Celulares (480px) */
+@media (max-width: 480px) {
+    .agendamento {
+        padding: 10px;
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 0;
+
+        h2 {
+          width: 80%;
+        }
+    }
+
+    .step {
+      text-align: left;
+        .number {
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+        }
+
+        .text {
+            h3 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .image {
+        display: none; // Esconde a imagem no mobile também
+    }
+}

@@ -1,0 +1,116 @@
+@use '../config.scss';
+
+.beneficio {
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(to right, #FFB8E0, #EC7FA9, #BE5985); /* Degradê horizontal */
+    
+    section {
+        display: flex;
+        align-items: center;
+        margin: 40px auto;
+        padding: 20px;
+        width: 50%;
+        justify-content: center; /* Alinha os itens no centro para telas maiores */
+
+        &.beneficios {
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+            border-radius: 10px;
+        }
+
+        &.apostilas, &.como-funciona {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+            text-align: left; /* Garante que o texto fique alinhado à esquerda */
+
+            h3 {
+                font-size: 2rem;
+                color: white;
+                font-family: config.$fontBanner;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                padding: 0;
+                font-size: 1.2rem;
+                color: #fff;
+                margin-top: 15px;
+
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #fff;
+            }
+        }
+
+        .image {
+            flex: 1;
+            max-width: 400px; /* Diminui a largura das imagens */
+            margin-left: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        section {
+            flex-direction: column;
+            text-align: center;
+            margin: 40px auto;
+            width: 90%;
+        }
+
+        .text {
+            padding: 10px;
+            text-align: left; /* Alinha o texto à esquerda em telas menores */
+        }
+
+        .image {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        section {
+            padding: 5px;
+            margin: 20px 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        /* Em dispositivos móveis, as imagens devem ficar em colunas */
+        section {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+

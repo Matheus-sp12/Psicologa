@@ -1,0 +1,128 @@
+.contato-container {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #EC7FA9;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    max-width: 100%;
+    margin: auto;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  width: 80%;
+    }
+  
+    .formulario {
+      flex: 1;
+      padding: 20px;
+      position: relative;
+  
+      h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+  
+      .mensagem-sucesso {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 15px;
+        animation: fadeIn 0.5s ease-in-out;
+        
+        svg {
+          color: #4CAF50;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        input, textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid white;
+          border-radius: 5px;
+          background: transparent;
+          color: white;
+          font-size: 16px;
+          outline: none;
+  
+          &::placeholder {
+            color: #FFEDFA
+          }
+        }
+  
+        .input-group {
+          display: flex;
+          gap: 10px;
+  
+          input {
+            flex: 1;
+          }
+        }
+  
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+  
+        button {
+          background: white;
+          color: #EC7FA9 ; 
+          padding: 12px;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s ease;
+  
+          &:hover {
+            background: #FFB8E0;
+          }
+        }
+      }
+    }
+  
+    .contatos {
+      flex: 1;
+      padding: 20px;
+      
+  
+      h3 {
+        font-size: 22px;
+        text-align: left;
+        margin: 15px;
+      }
+  
+      p {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    }
+  }
+  
+  /* Animação da mensagem de sucesso */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

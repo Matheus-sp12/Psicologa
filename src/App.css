@@ -1,0 +1,16 @@
+
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  padding-top: 60px; /* Ajuste a margem conforme o tamanho da Navbar */
+}
+
+html {
+  scroll-behavior: smooth;
+}

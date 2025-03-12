@@ -1,0 +1,91 @@
+@use '../config.scss';
+
+.teste h2 {
+  font-size: 30px;
+            font-family: config.$fontBanner;
+            color: rgb(255, 255, 255);
+            padding-top: 5px;
+            width: 100%;
+            font-size: 2.5rem;
+            text-align: center;
+            color: config.$colorQuaternary;
+            font-family: config.$fontBanner;
+
+}
+.sobre-mim-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    margin-top: 20px;
+  
+    .sobre-mim-card {
+      max-width: 900px;
+      width: 100%;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+    }
+  
+    .sobre-mim-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+  
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .profile-image {
+        width: 350px;
+        height: 500px;
+        object-fit: cover;        
+      }
+    }
+  
+    .text-content {
+      max-width: 500px;
+      text-align: left;
+      color: #333;
+  
+      h2 {
+        font-size: 30px;
+        font-family: config.$fontBanner;
+        color: rgb(255, 255, 255);
+        padding-top: 0;
+        width: 100%;
+        font-size: 2.5rem;
+        color: config.$colorQuaternary;
+        font-family: config.$fontBanner;
+      }
+  
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+  
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+  
+      .target-audience {
+        font-weight: bold;
+      }
+    }
+  }
+  
