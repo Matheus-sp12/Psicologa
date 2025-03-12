@@ -4,7 +4,7 @@
 
 ### Print da Página:
 
-![Imagem da pagina](./src/assets/print.png)  <!-- Substitua com o caminho correto da imagem -->
+![Imagem da pagina](./src/assets/print.png)  
 
 Este é um site criado para uma **psicóloga** fornecer informações sobre seus serviços, incluindo agendamento de sessões, FAQ, depoimentos, e mais. O projeto foi desenvolvido utilizando **React** e **Sass**, com várias bibliotecas para funcionalidade adicional.
 
