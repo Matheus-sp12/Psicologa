@@ -15,8 +15,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Verifique se o navbar ou qualquer outro elemento não está cobrindo a página */
 html, body {
-  height: 100%;
-  overflow-x: hidden; 
-  overflow-y: auto; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede a rolagem horizontal */
 }
+

@@ -38,18 +38,18 @@ const Navbar = () => {
   const handleLinkClick = (event) => {
     // Impede o comportamento padrão de navegação
     event.preventDefault();
-
+  
     // Rola até a seção
-    const targetId = event.target.getAttribute("href").substring(1);
+    const targetId = event.target.getAttribute("href").substring(1); // Remove o '#' do link
     const targetElement = document.getElementById(targetId);
-
+  
     if (targetElement) {
       window.scrollTo({
         top: targetElement.offsetTop,
-        behavior: "smooth",
+        behavior: "smooth", // Rolagem suave
       });
     }
-
+  
     closeMenu(); // Fecha o menu após o clique
   };
 
