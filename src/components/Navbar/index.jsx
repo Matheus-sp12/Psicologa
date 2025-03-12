@@ -78,7 +78,7 @@ const Navbar = () => {
           &times; {/* ícone de fechar */}
         </button>
         <ul className="navbar-list">
-          <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+          <li><a href="#home" onClick={handleLinkClick}>Inicio</a></li>
           <li><a href="#about" onClick={handleLinkClick}>Quando buscar</a></li>
           <li><a href="#services" onClick={handleLinkClick}>Agendamento</a></li>
           <li><a href="#sobre" onClick={handleLinkClick}>Sobre</a></li>
@@ -96,7 +96,7 @@ const Navbar = () => {
           <img src={img1} alt="Logo" loading="lazy" />
         </div>
         <ul className="top-navbar-list">
-          <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+          <li><a href="#home" onClick={handleLinkClick}>Inicio</a></li>
           <li><a href="#about" onClick={handleLinkClick}>Quando buscar</a></li>
           <li><a href="#services" onClick={handleLinkClick}>Agendamento</a></li>
           <li><a href="#sobre" onClick={handleLinkClick}>Sobre</a></li>
